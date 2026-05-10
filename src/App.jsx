@@ -9,10 +9,7 @@ function App() {
   const [category, setCategory] = useState("All");
 
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
-
-  const addToCart = (item) => {
-    setCart([...cart, item]);
-  };
+  const addToCart = (itemName) => setCart([...cart, itemName]);
 
   return (
     <div className={isDarkMode ? "dark-mode" : "light-mode"}>
@@ -20,7 +17,7 @@ function App() {
       
       <select onChange={(e) => setCategory(e.target.value)}>
         <option value="All">All</option>
-        <option value="Produce">Produce</option>
+        <option value="Fruits">Fruits</option>
         <option value="Dairy">Dairy</option>
         <option value="Bakery">Bakery</option>
       </select>
